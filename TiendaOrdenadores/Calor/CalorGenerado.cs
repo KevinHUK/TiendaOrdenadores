@@ -1,17 +1,18 @@
 ﻿namespace TiendaOrdenadores.Calor;
 
-public class CalorGenerado
+public class CalorGenerado : ICalorable
 {
-    public double calor;
+    public int calor;
 
-    public CalorGenerado(double calor)
+    public CalorGenerado(int calor)
     {
         Calor = calor;
     }
 
-    public double Calor
+    public int Calor
     {
         get => calor;
         set => calor = (value <= 0) ? calor = 1 : calor = value;
     }
+    
 }

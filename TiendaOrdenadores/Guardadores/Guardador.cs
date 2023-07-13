@@ -4,27 +4,24 @@ namespace TiendaOrdenadores.Guardadores;
 
 public class Guardador : IGuardable
 {
-    private int _almacenamiento;
+    private double _almacenamiento;
 
   
 
 
-    public Guardador(int almacenamiento)
+    public Guardador(double almacenamiento)
     {
         Almacenamiento = almacenamiento;
         
     }
 
-    public int GetAlmacenamiento()
-    {
-        return Almacenamiento;
-    }
 
-    public int Almacenamiento
+
+    public double Almacenamiento
     {
         get => _almacenamiento;
 
-        set => _almacenamiento = (value <= 0) ? _almacenamiento = 1 : _almacenamiento = value;  
+        set => _almacenamiento = (value <= 0) ? _almacenamiento = 0 : _almacenamiento = value;  
     }
 
 }

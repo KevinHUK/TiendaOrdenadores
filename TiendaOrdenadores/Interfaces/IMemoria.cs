@@ -2,5 +2,5 @@
 
 public interface IMemoria
 {
-    int Almacenamiento { get; set; }
+    double Almacenamiento { get; set; }
 }

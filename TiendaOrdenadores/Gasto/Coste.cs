@@ -9,7 +9,7 @@ public class Coste : ICoste
         Precio = precio;
     }
 
-    public double Precio { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public double Precio { get => _precio; set => _precio = value <= 0 ? _precio = 1 : _precio = value; }
 }
 
     

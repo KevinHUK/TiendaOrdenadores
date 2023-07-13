@@ -2,14 +2,16 @@
 
 public class Memoria : IMemorizable
 {
-    private int _memoria;
+    private double _memoria;
 
-    public Memoria(int memoria)
+    public Memoria(double memoria)
     {
         _memoria = memoria;
     }
 
-    public int Almacenamiento { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+    public double Almacenamiento { get => _memoria;
+        set => _memoria = value <= 0 ? _memoria = 1 : _memoria = value;
+    }
 
    
 

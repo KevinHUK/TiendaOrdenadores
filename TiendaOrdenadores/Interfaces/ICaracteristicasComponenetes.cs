@@ -1,6 +1,8 @@
-﻿namespace TiendaOrdenadores.Interfaces;
+﻿using TiendaOrdenadores.Gasto;
 
-public interface ICaracteristicasComponenentes
+namespace TiendaOrdenadores.Interfaces;
+
+public interface ICaracteristicasComponenentes 
 {
     double PrecioPorOrdenador { get; }
     double CalorTotal { get; }

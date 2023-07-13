@@ -1,8 +1,13 @@
-﻿namespace TiendaOrdenadores.Interfaces;
+﻿using TiendaOrdenadores.Calor;
+using TiendaOrdenadores.Gasto;
 
-public interface IComponente
+namespace TiendaOrdenadores.Interfaces;
+
+public interface IComponente : ICoste
 {
-    double Precio { get; set; }
+    
 
     string NumeroDeSerie { get; set; }
+
+
 }

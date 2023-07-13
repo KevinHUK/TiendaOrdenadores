@@ -11,31 +11,38 @@ namespace TiendaOrdenadores;
 public class Ordenador : IOrdenador, ICaracteristicasComponenentes
 {
 
-    private TipoComponentes _tipo;
-    private IGuardable _disco;
-    private IProcesable _procesador;
-    private IMemorizable _bancoDeMemoria;
-    private ICalorable _calor;
-    private ICoste _coste;
-    public Ordenador(TipoComponentes tipo, IGuardable disco, IProcesable procesador, IMemorizable bancoDeMemoria)
-    {
-        _tipo = tipo;
-        _disco = disco;
-        _procesador = procesador;
-        _bancoDeMemoria = bancoDeMemoria;
+    private List<IComponente> componentes = new();
+    private double precio;
+    private int calor;
+    public double PrecioPorOrdenador  {
+        get{
+            foreach (var item in componentes)
+            {
+                precio += (item as ICoste).Precio;
+            }
+            return precio;
+        }
     }
 
-    public double PrecioPorOrdenador => throw new NotImplementedException();
 
-    public double CalorTotal => throw new NotImplementedException();
 
-    public double calorTotal()
+
+
+    public void add(IComponente nuevoComponente)
     {
-        return _calor.Calor;
+        componentes.Add(nuevoComponente);
     }
 
-    public double precioPorOrdenador()
+    public double CalorTotal
     {
-        return _coste.Precio;
+        get
+        {
+            foreach (var item in componentes)
+            {
+                calor += (item as ICalorable).Calor;
+            }
+        return calor;
+    }
+        
     }
 }

@@ -7,22 +7,20 @@ using TiendaOrdenadores.Calor;
 
 namespace TiendaOrdenadores.Procesadores
 {
-    public class Procesador : IProcesable, ICalorable
+    public class Procesador : IProcesable
     {
-        public double Precio { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string NumeroDeSerie { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Calor { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Cores { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        private int _cores;
 
-        public int GetCalor()
+        public Procesador( int cores)
         {
-            throw new NotImplementedException();
+            Cores = cores;
         }
 
-        public int GetCores()
-        {
-            throw new NotImplementedException();
+        public int Cores { get => _cores;
+            set => _cores = value <= 0 ? _cores = 1 : _cores = value;
         }
+
+    
 
         
     }
