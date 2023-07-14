@@ -1,5 +1,4 @@
-﻿using TiendaOrdenadores.Calor;
-using TiendaOrdenadores.Gasto;
+﻿using TiendaOrdenadores.Gasto;
 
 namespace TiendaOrdenadores.Interfaces;
 

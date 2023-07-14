@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TiendaOrdenadores.Calor;
-
-namespace TiendaOrdenadores.Procesadores
+﻿namespace TiendaOrdenadores.Procesadores
 {
     public class Procesador : IProcesable
     {
