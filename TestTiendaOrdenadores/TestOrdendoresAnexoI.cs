@@ -42,18 +42,34 @@ namespace TestTiendaOrdenadores
         }
 
         [TestMethod]
-        public void TestOrdenadorMaria()
+        public void TestOrdenadorMariaPrecio()
         {
-            Assert.AreEqual(ordenadorMaria.CalorTotal, 30);
             Assert.AreEqual(ordenadorMaria.PrecioPorOrdenador, 180);
 
         }
         [TestMethod]
-        public void TestOrdenadorAndres()
+        public void TestOrdenadorMariaCalor()
         {
-            Assert.AreEqual(ordenadorAndres.CalorTotal, 30);
+            Assert.AreEqual(ordenadorMaria.CalorTotal, 30);
+
+        }
+        [TestMethod]
+        public void TestOrdenadorAndresPrecio()
+        {
             Assert.AreEqual(ordenadorAndres.PrecioPorOrdenador, 180);
 
+        }
+        [TestMethod]
+        public void TestOrdenadorAndresCalor()
+        {
+            Assert.AreEqual(ordenadorAndres.PrecioPorOrdenador, 180);
+
+        }
+
+        [TestMethod]
+        public void TestOrdenadorCorrecto()
+        {
+            //es correcto si tiene los 3 comps
         }
 
     }

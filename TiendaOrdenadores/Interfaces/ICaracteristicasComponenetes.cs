@@ -1,6 +1,4 @@
-﻿using TiendaOrdenadores.Gasto;
-
-namespace TiendaOrdenadores.Interfaces;
+﻿namespace TiendaOrdenadores.Interfaces;
 
 public interface ICaracteristicasComponenentes 
 {
